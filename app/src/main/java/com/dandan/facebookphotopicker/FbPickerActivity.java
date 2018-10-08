@@ -31,7 +31,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
- class FbPickerActivity extends AppCompatActivity implements IDownloadListener, FacebookCallback<LoginResult> {
+ public class FbPickerActivity extends AppCompatActivity implements IDownloadListener, FacebookCallback<LoginResult> {
 
     private CallbackManager callbackManager;
     private RecyclerView lstPhotos;
