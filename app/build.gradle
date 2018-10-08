@@ -1,4 +1,18 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+
+publish {
+    def groupProjectID = 'com.kamel.library'
+    def artifactProjectID = 'facebook-photo-picker'
+    def publishVersionID = '0.5'
+    userOrg = 'kamelmohammad'
+    repoName = 'facebook-photo-picker'
+    groupId = groupProjectID
+    artifactId = artifactProjectID
+    publishVersion = publishVersionID
+    desc = 'Android library to pick and download photos from facebook account'
+    website = 'https://github.com/kameloov/facebookphotopicker'
+}
 
 android {
     compileSdkVersion 27
@@ -16,6 +30,10 @@ android {
         }
     }
     buildToolsVersion '27.0.3'
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {

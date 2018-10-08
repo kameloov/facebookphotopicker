@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    tools:context="com.digitaldata.facebookphotopicker.activity.MainActivity">
+    tools:context="com.dandan.facebookphotopicker.FbPickerActivity">
 
     <TextView
         android:id="@+id/txtCount"
@@ -29,8 +29,8 @@
     <ProgressBar
         android:id="@+id/progressDownload"
         style="?android:attr/progressBarStyle"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
         android:layout_marginBottom="8dp"
         android:layout_marginStart="16dp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -1,4 +1,4 @@
-package com.digitaldata.facebookphotopicker.entity;
+package com.dandan.facebookphotopicker.entity;
 
 import android.net.Uri;
 

@@ -1,7 +1,6 @@
-package com.digitaldata.facebookphotopicker.activity;
+package com.dandan.facebookphotopicker;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
@@ -11,12 +10,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.digitaldata.facebookphotopicker.FaceBookManager;
-import com.digitaldata.facebookphotopicker.IDownloadListener;
-import com.digitaldata.facebookphotopicker.PhotoDownloadManager;
-import com.digitaldata.facebookphotopicker.R;
-import com.digitaldata.facebookphotopicker.adapter.FBPhotoAdapter;
-import com.digitaldata.facebookphotopicker.entity.FacebookPhoto;
+import com.dandan.facebookphotopicker.entity.FacebookPhoto;
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -37,7 +31,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class MainActivity extends AppCompatActivity implements IDownloadListener, FacebookCallback<LoginResult> {
+ class FbPickerActivity extends AppCompatActivity implements IDownloadListener, FacebookCallback<LoginResult> {
 
     private CallbackManager callbackManager;
     private RecyclerView lstPhotos;
@@ -56,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements IDownloadListener
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_fb_photo_picker);
         if (getSupportActionBar()!=null)
         getSupportActionBar().hide();
         attachViews();
@@ -139,11 +133,11 @@ public class MainActivity extends AppCompatActivity implements IDownloadListener
                             nextRequest.setCallback(this);
                             nextRequest.executeAsync();
                         }
-                        MainActivity.this.runOnUiThread(new Runnable() {
+                        FbPickerActivity.this.runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
                                 if (adapter == null) {
-                                    adapter = new FBPhotoAdapter(MainActivity.this, photos,downloadManager);
+                                    adapter = new FBPhotoAdapter(FbPickerActivity.this, photos,downloadManager);
                                     lstPhotos.setAdapter(adapter);
                                 } else {
                                     adapter.addPhotos(photos);

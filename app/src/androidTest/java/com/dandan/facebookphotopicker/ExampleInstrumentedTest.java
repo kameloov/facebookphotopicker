@@ -1,4 +1,4 @@
-package com.digitaldata.facebookphotopicker;
+package com.dandan.facebookphotopicker;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

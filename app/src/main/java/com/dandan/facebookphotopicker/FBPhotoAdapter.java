@@ -1,13 +1,10 @@
-package com.digitaldata.facebookphotopicker.adapter;
+package com.dandan.facebookphotopicker;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.drawable.Drawable;
-import android.support.annotation.Nullable;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,9 +12,7 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.transition.Transition;
-import com.digitaldata.facebookphotopicker.PhotoDownloadManager;
-import com.digitaldata.facebookphotopicker.R;
-import com.digitaldata.facebookphotopicker.entity.FacebookPhoto;
+import com.dandan.facebookphotopicker.entity.FacebookPhoto;
 
 import java.util.List;
 
@@ -25,7 +20,7 @@ import java.util.List;
  * Created by kameloov on 10/3/2018.
  */
 
-public class FBPhotoAdapter extends RecyclerView.Adapter<FBPhotoAdapter.PhotoHolder> {
+ class FBPhotoAdapter extends RecyclerView.Adapter<FBPhotoAdapter.PhotoHolder> {
 
     private Context context;
     private List<FacebookPhoto> photoList;
@@ -39,7 +34,7 @@ public class FBPhotoAdapter extends RecyclerView.Adapter<FBPhotoAdapter.PhotoHol
     @Override
     public PhotoHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View v  = inflater.inflate(R.layout.list_item_photo,parent,false);
+        View v  = inflater.inflate(R.layout.list_item_fb_photo,parent,false);
         return new PhotoHolder(v);
     }
 

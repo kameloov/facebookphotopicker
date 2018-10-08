@@ -1,4 +1,4 @@
-package com.digitaldata.facebookphotopicker;
+package com.dandan.facebookphotopicker;
 
 import org.junit.Test;
 

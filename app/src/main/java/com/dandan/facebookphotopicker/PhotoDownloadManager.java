@@ -1,12 +1,12 @@
-package com.digitaldata.facebookphotopicker;
+package com.dandan.facebookphotopicker;
 
-import com.digitaldata.facebookphotopicker.entity.FacebookPhoto;
+import com.dandan.facebookphotopicker.entity.FacebookPhoto;
 
 /**
  * Created by kameloov on 10/6/2018.
  */
 
-public class PhotoDownloadManager implements IDownloadListener {
+ class PhotoDownloadManager implements IDownloadListener {
     private int activeDownloads=0 ;
     private IDownloadListener listener;
 

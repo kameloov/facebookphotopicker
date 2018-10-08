@@ -1,11 +1,10 @@
-package com.digitaldata.facebookphotopicker;
+package com.dandan.facebookphotopicker;
 
-import android.content.Context;
 import android.net.Uri;
 import android.os.AsyncTask;
 
-import com.digitaldata.facebookphotopicker.entity.FacebookPhoto;
-import com.digitaldata.facebookphotopicker.entity.ImageData;
+import com.dandan.facebookphotopicker.entity.FacebookPhoto;
+import com.dandan.facebookphotopicker.entity.ImageData;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -25,7 +24,7 @@ public class LoadPhotoTask extends AsyncTask<Void,Void,File> {
     private FacebookPhoto photo;
     private IDownloadListener downloadListener;
 
-    public LoadPhotoTask(FacebookPhoto photo, IDownloadListener downloadListener) {
+     LoadPhotoTask(FacebookPhoto photo, IDownloadListener downloadListener) {
         this.photo = photo;
         this.downloadListener = downloadListener;
     }

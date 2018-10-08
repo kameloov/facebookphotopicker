@@ -1,4 +1,4 @@
-package com.digitaldata.facebookphotopicker.entity;
+package com.dandan.facebookphotopicker.entity;
 
 /**
  * Created by kameloov on 9/23/2018.
